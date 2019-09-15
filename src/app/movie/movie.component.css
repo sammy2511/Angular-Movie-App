@@ -1,0 +1,28 @@
+
+.movie{
+    float: left;
+    margin-left: 15px;
+    margin-top:10px;
+    
+}
+
+.image{
+    height: 250px;
+    width: 200px;
+    
+}
+
+.thumbnail{
+    height: 250px;
+    width: 200px;
+    border:4px solid black;
+    box-shadow: 2px;
+    cursor: pointer;
+}
+
+.name{
+    font-size: 15px;
+    width:200px;
+    text-overflow: ellipsis;
+    height:50px;
+}
