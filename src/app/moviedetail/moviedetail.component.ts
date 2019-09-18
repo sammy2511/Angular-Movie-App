@@ -9,11 +9,21 @@ import { MovieService } from '../services/movie.service';
 })
 export class MoviedetailComponent implements OnInit {
 
-  constructor(private route :ActivatedRoute,private movieService : MovieService) { }
+  private movie : any ;
+
+  constructor(private route :ActivatedRoute,private movieService : MovieService,private router : Router) { }
 
   ngOnInit() {
     this.movieService.getMovieById(this.route.snapshot.params.id)
-      .subscribe(response => console.log(response))
+      .subscribe(response => {
+        this.movie = response;
+        this.movie.poster_path = 'http://image.tmdb.org/t/p/w185'+this.movie.poster_path;
+        
+        console.log(this.movie)
+      })
   }
 
+  goBack(){
+    this.router.navigate(['/'])
+  }
 }

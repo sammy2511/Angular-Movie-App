@@ -1,3 +1,17 @@
-<p>
-  moviedetail works!
-</p>
+<div class="container">
+  
+  <img [src]="movie.poster_path" alt="" class="poster">
+  
+  <div class="content">
+    <h3>{{movie.title}}</h3>
+    <span>{{movie.release_date | slice:0:4}}</span>
+
+    <br><br>
+    <strong>Description:</strong><p>{{movie.overview}}</p>
+    <strong>Ratings :</strong><p>{{movie.vote_average}}/10</p>
+    <button (click)="goBack()"class="btn btn-primary">Back</button>
+  </div>
+
+  
+
+</div>
