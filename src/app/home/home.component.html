@@ -1,8 +1,14 @@
 <div class="container">
   <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Search Movie" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <input 
+      (keyup.enter)="search(title)" #title
+      type="text" 
+      class="form-control" 
+      placeholder="Search Movie" 
+      aria-label="Recipient's username" 
+      aria-describedby="button-addon2">
     <div class="input-group-append">
-      <button class="btn  btn-primary" type="button" id="button-addon2">Search</button>
+      <!--<button (click)="search(title)" #title class="btn  btn-primary" type="button" id="button-addon2">Search</button>-->
     </div>
   </div>
 

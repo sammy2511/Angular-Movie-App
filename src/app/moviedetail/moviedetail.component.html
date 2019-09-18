@@ -1,8 +1,8 @@
 <div class="container">
   
-  <img [src]="movie.poster_path" alt="" class="poster">
+  <img *ngIf = "movie" [src]="movie.poster_path" alt="" class="poster">
   
-  <div class="content">
+  <div class="content" *ngIf = "movie">
     <h3>{{movie.title}}</h3>
     <span>{{movie.release_date | slice:0:4}}</span>
 
@@ -15,3 +15,4 @@
   
 
 </div>
+

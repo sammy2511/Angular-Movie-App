@@ -1,4 +1,4 @@
-.poster{
+ .poster{
     float: left;
     height:500px;
     width:300px;
@@ -18,4 +18,6 @@
 
 *{
     margin-top:30px;
-}
+} 
+
+
